@@ -23,9 +23,65 @@ conda activate local_feats_unc
 For running the experiments, please download
 - [hpatches-sequences-release](http://icvl.ee.ic.ac.uk/vbalnt/hpatches/hpatches-sequences-release.tar.gz) (direct link)
 
+    <details>
+    <summary> [expected directory structure] </summary>
+
+    ```shell
+        HPATCHES
+        └── hpatches-sequences-release
+            ├── i_ajuntament
+            ├── i_autannes
+            .
+            .
+            .
+    ```
+
+    </details>
+
 - [TUM-RGBD freiburg1 (fr1) sequences](https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download)
 
+    <details>
+    <summary>[expected directory structure]</summary>
+
+    ```shell
+    TUM_RGBD
+    ├── freiburg1_<name> # e.g. freiburg1_360
+    │   ├── rgb
+    │   ├── groundtruth.txt
+    │   └── rgb.txt
+    ├── ...
+    .
+    .
+    .
+    ```
+    </details>
+
 - [KITTI odometry sequences](https://www.cvlibs.net/datasets/kitti/eval_odometry.php) (color images, calibration files and  ground-truth poses).
+
+    <details>
+    <summary> [expected directory structure] </summary>
+
+    ```shell
+    KITTI
+    └── odometry
+        └── dataset
+            ├── poses
+            │   ├── 00.txt
+            │   ├── 01.txt
+            .   .
+            .   .
+            .   .
+            └── sequences
+                ├── 00
+                │   ├── image_2
+                │   ├── calib.txt
+                │   └── times.txt
+                .
+                .
+                .
+    ```
+
+    </details>
 
 Absolute paths for each dataset can be modified in [`datasets/settings.py`](datasets/settings.py).
 
